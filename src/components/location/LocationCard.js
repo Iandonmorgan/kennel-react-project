@@ -1,13 +1,17 @@
 import React from "react";
+import "./Location.css"
 
-const LocationCard = () => {
+const LocationCard = (props) => {
   return (
     <div className="card">
       <div className="card-content">
+        <picture>
+          <img src={require("./loc.png")} alt="Location" />
+        </picture>
         <h3>
-          Name: <span className="location-name">Nashville</span>
+          Name: <span className="card-locname">{props.location.name}</span>
         </h3>
-        <p>Tennessee, USA</p>
+        <p>Address: {props.location.address}</p>
       </div>
     </div>
   );
