@@ -33,11 +33,6 @@
       "address": "123 Fake St. Nashville, TN 37207"
     },
     {
-      "id": 2,
-      "name": "Franklin Kennel",
-      "address": "456 Main St. Franklin, TN 37067"
-    },
-    {
       "id": 3,
       "name": "Nashville North Kennel",
       "address": "500 Puppy Way Nashville, TN 37216"
