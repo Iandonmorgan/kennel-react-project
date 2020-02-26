@@ -4,29 +4,37 @@ import OwnerCard from './OwnerCard';
 import OwnerManager from '../../modules/OwnerManager';
 
 const OwnerList = () => {
-  // The initial state is an empty array
-  const [owners, setOwners] = useState([]);
+    // The initial state is an empty array
+    const [owners, setOwners] = useState([]);
 
-  const getOwners = () => {
-    // After the data comes back from the API, we
-    //  use the setOwners function to update state
-    return OwnerManager.getAll().then(ownersFromAPI => {
-      setOwners(ownersFromAPI)
-    });
-  };
+    const deleteOwner = id => {
+        OwnerManager.delete(id)
+            .then(() => OwnerManager.getAll().then(setOwners));
+    };
 
-  // got the owners from the API on the component's first render
-  useEffect(() => {
-    getOwners();
-  }, []);
+    const getOwners = () => {
+        // After the data comes back from the API, we
+        //  use the setOwners function to update state
+        return OwnerManager.getAll().then(ownersFromAPI => {
+            setOwners(ownersFromAPI)
+        });
+    };
 
-  // Finally we use map() to "loop over" the owners array to show a list of owner cards
-  return(
-    <div className="owner-container-cards">
-      {owners.map(owner =>
-        <OwnerCard key={owner.id} owner={owner} />
-      )}
-    </div>
-  );
+    // got the owners from the API on the component's first render
+    useEffect(() => {
+        getOwners();
+    }, []);
+
+    // Finally we use map() to "loop over" the owners array to show a list of owner cards
+    return (
+        <div className="owner-container-cards">
+            {owners.map(owner =>
+                <OwnerCard
+                    key={owner.id}
+                    owner={owner}
+                    deleteOwner={deleteOwner} />
+            )}
+        </div>
+    );
 };
 export default OwnerList
