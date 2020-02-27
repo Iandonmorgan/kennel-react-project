@@ -4,11 +4,17 @@ import { Link } from "react-router-dom";
 import {firstLetterCase} from '../../modules/helpers'
 
 const AnimalCard = (props) => {
+  let pictureFileId;
+  try {
+    pictureFileId = require(`./animal--${props.animal.id}.png`);
+  } catch {
+    pictureFileId = require(`./animal.svg`);
+  }
   return (
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require('./dog.svg')} alt="My Dog" />
+          <img src={ pictureFileId } alt="My Dog" />
         </picture>
         <h3>Name: <span className="card-petname">
           {firstLetterCase(props.animal.name)}

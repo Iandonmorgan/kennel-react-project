@@ -3,11 +3,17 @@ import "./Location.css";
 import { Link } from "react-router-dom";
 
 const LocationCard = (props) => {
+  let pictureFileId;
+  try {
+    pictureFileId = require(`./loc--${props.location.id}.png`);
+  } catch {
+    pictureFileId = require(`./loc.png`);
+  }
   return (
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require("./loc.png")} alt="Location" />
+          <img src={ pictureFileId } alt="Location" />
         </picture>
         <h3>
           Name: <span className="card-locname">{props.location.name}</span>

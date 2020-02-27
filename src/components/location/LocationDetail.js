@@ -26,11 +26,18 @@ const LocationDetail = props => {
             });
     }, [props.locationId]);
 
+    let pictureFileId;
+    try {
+      pictureFileId = require(`./loc--${props.animal.id}.png`);
+    } catch {
+      pictureFileId = require(`./loc.png`);
+    }
+
     return (
         <div className="card">
             <div className="card-content">
                 <picture>
-                    <img src={require("./loc.png")} alt="Location" />
+                    <img src={ pictureFileId } alt="Location" />
                 </picture>
                 <h3>Name: <span style={{ color: 'darkslategrey' }}>{location.name}</span></h3>
                 <p>Address: {location.address}</p>
