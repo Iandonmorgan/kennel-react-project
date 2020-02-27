@@ -28,25 +28,37 @@ const LocationDetail = props => {
 
     let pictureFileId;
     try {
-      pictureFileId = require(`./loc--${props.animal.id}.png`);
+        pictureFileId = require(`./loc--${props.animal.id}.png`);
     } catch {
-      pictureFileId = require(`./loc.png`);
+        pictureFileId = require(`./loc.png`);
     }
-
-    return (
-        <div className="card">
-            <div className="card-content">
-                <picture>
-                    <img src={ pictureFileId } alt="Location" />
-                </picture>
-                <h3>Name: <span style={{ color: 'darkslategrey' }}>{location.name}</span></h3>
-                <p>Address: {location.address}</p>
-                <button type="button" disabled={isLoading} onClick={handleDelete}>
-                    Shutter Location
+    if (location.name !== undefined && location.address !== undefined) {
+        return (
+            <div className="card">
+                <div className="card-content">
+                    <picture>
+                        <img src={pictureFileId} alt="Location" />
+                    </picture>
+                    <h3>Name: <span style={{ color: 'darkslategrey' }}>{location.name}</span></h3>
+                    <p>Address: {location.address}</p>
+                    <button type="button" disabled={isLoading} onClick={handleDelete}>
+                        Shutter Location
         </button>
+                </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div className="card">
+                <div className="card-content">
+                    <picture>
+                        <img src={require('../animal/lostdog.png')} alt="404 PUPPY NOT FOUND" />
+                    </picture>
+                    <center><h3>LOCATION NOT FOUND</h3></center>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default LocationDetail;
