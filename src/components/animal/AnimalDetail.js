@@ -19,17 +19,25 @@ const AnimalDetail = props => {
     AnimalManager.get(props.animalId).then(animal => {
       setAnimal({
         name: animal.name,
-        breed: animal.breed
+        breed: animal.breed,
+        id: animal.id
       });
       setIsLoading(false);
     });
   }, [props.animalId]);
 
+  let pictureFileId;
+  try {
+    pictureFileId = require(`./animal--${animal.id}.png`);
+  } catch {
+    pictureFileId = require(`./animal.svg`);
+  }
+  
   return (
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require("./dog.svg")} alt="My Dog" />
+          <img src={ pictureFileId } alt="My Dog" />
         </picture>
         <h3>
           Name: <span style={{ color: "darkslategrey" }}>{animal.name}</span>

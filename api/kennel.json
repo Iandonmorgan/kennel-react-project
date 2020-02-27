@@ -51,6 +51,11 @@
       "id": 3,
       "name": "Nashville North Kennel",
       "address": "500 Puppy Way Nashville, TN 37216"
+    },
+    {
+      "name": "Nashville North",
+      "address": "555 Puppy Way, Nashville, TN 37216",
+      "id": 4
     }
   ],
   "owners": [
@@ -85,6 +90,16 @@
       "id": 3,
       "name": "Michael Clark",
       "title": "Jr. Poop Scooper"
+    },
+    {
+      "name": "Niall Horan",
+      "title": "Poop Inspector",
+      "id": 4
+    },
+    {
+      "name": "Jeff Jefferson",
+      "title": "King of the Jeffs",
+      "id": 5
     }
   ]
 }

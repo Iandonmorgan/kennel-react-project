@@ -2,11 +2,17 @@ import React from "react";
 import "./Employee.css"
 
 const EmployeeCard = (props) => {
+  let pictureFileId;
+  try {
+    pictureFileId = require(`./employee--${props.employee.id}.png`);
+  } catch {
+    pictureFileId = require(`./employee.png`);
+  }
   return (
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require("./employee.png")} alt="Employee" />
+          <img src={ pictureFileId } alt="Employee" />
         </picture>
         <h3>
           Name: <span className="card-employeename">{props.employee.name}</span>

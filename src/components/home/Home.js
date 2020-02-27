@@ -9,7 +9,8 @@ const Home = () => {
     <address>
       Visit Us at the Nashville North Location
       <br />
-      500 Puppy Way
+      500 Puppy Way <br />
+      Nashville, TN 37216
     </address>
     </div>
   );
