@@ -2,11 +2,17 @@ import React from "react";
 import "./Owner.css"
 
 const OwnerCard = (props) => {
+  let pictureFileId;
+  try {
+    pictureFileId = require(`./owner--${props.owner.id}.png`);
+  } catch {
+    pictureFileId = require(`./owner.png`);
+  }
   return (
     <div className="owner-card">
       <div className="owner-card-content">
         <picture>
-          <img src={require(`./owner--${props.owner.id}.png`)} alt="Owner" />
+          <img src={ pictureFileId } alt="Owner" />
         </picture>
         <h3>
           Name: <span className="card-ownername">{props.owner.name}</span>

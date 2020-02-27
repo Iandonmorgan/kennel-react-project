@@ -17,13 +17,28 @@
     },
     {
       "id": 5,
-      "name": "Monkey",
+      "name": "monkey",
       "breed": "Black Lab"
     },
     {
       "id": 6,
       "name": "Rory",
       "breed": "Mutt"
+    },
+    {
+      "name": "Ozzy",
+      "breed": "Labradoodle",
+      "id": 7
+    },
+    {
+      "name": "bumbly",
+      "breed": "Basset Hound",
+      "id": 8
+    },
+    {
+      "name": "Steve",
+      "breed": "Gerbil Dog",
+      "id": 9
     }
   ],
   "locations": [
@@ -48,6 +63,11 @@
       "id": 2,
       "name": "Amanda King",
       "title": "Chief Nose Booper"
+    },
+    {
+      "name": "Happy Gilmore",
+      "title": "Pro Golfer",
+      "id": 4
     }
   ],
   "employees": [
@@ -65,11 +85,6 @@
       "id": 3,
       "name": "Michael Clark",
       "title": "Jr. Poop Scooper"
-    },
-    {
-      "id": 4,
-      "name": "Niall Horan",
-      "title": "Poop Inspector"
     }
   ]
 }
