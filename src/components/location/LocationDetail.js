@@ -28,7 +28,7 @@ const LocationDetail = props => {
 
     let pictureFileId;
     try {
-        pictureFileId = require(`./loc--${props.animal.id}.png`);
+        pictureFileId = require(`./loc--${props.locationId}.png`);
     } catch {
         pictureFileId = require(`./loc.png`);
     }
@@ -41,6 +41,10 @@ const LocationDetail = props => {
                     </picture>
                     <h3>Name: <span style={{ color: 'darkslategrey' }}>{location.name}</span></h3>
                     <p>Address: {location.address}</p>
+                    <button type="button"
+                        onClick={() => props.history.push(`/locations/${props.locationId}/edit`)}>
+                        Edit
+                    </button>
                     <button type="button" disabled={isLoading} onClick={handleDelete}>
                         Shutter Location
         </button>

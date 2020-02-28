@@ -1,7 +1,7 @@
 import React from "react";
 import "./Animal.css";
 import { Link } from "react-router-dom";
-import {firstLetterCase} from '../../modules/helpers'
+import { firstLetterCase } from '../../modules/helpers'
 
 const AnimalCard = (props) => {
   let pictureFileId;
@@ -14,7 +14,7 @@ const AnimalCard = (props) => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={ pictureFileId } alt="My Dog" />
+          <img src={pictureFileId} alt="My Dog" />
         </picture>
         <h3>Name: <span className="card-petname">
           {firstLetterCase(props.animal.name)}
@@ -23,6 +23,10 @@ const AnimalCard = (props) => {
         <Link to={`/animals/${props.animal.id}`}>
           <button>Details</button>
         </Link>
+        <button type="button"
+          onClick={() => props.history.push(`/animals/${props.animal.id}/edit`)}>
+          Edit
+        </button>
         <button type="button" onClick={() => props.deleteAnimal(props.animal.id)}>Discharge Animal</button>
       </div>
     </div>

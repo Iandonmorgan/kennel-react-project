@@ -3,7 +3,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    background: aliceblue;
+    background: #DCFFFD;
     margin: 10px 0 2em 0;
     flex: 0 1 24%;
   }
@@ -16,7 +16,7 @@
     margin-top: 0;
     margin-bottom: .5em;
     font-weight: bold;
-    color: rgb(43, 112, 241);
+    color: #3F6634;
   }
   
   .card-content p {
@@ -29,7 +29,7 @@
   }
   
   .card button {
-    background-color: cornflowerblue;
+    background-color: #3F6634;
     border: none;
     color: cornsilk;
     text-align: center;
@@ -43,5 +43,5 @@
   }
   
   .card button:hover {
-    background-color: darkblue;
+    background-color: #4FB477;
   }
