@@ -43,9 +43,13 @@ const AnimalDetail = props => {
                         Name: <span style={{ color: "darkslategrey" }}>{animal.name}</span>
                     </h3>
                     <p>Breed: {animal.breed}</p>
+                    <button type="button"
+                        onClick={() => props.history.push(`/animals/${animal.id}/edit`)}>
+                        Edit
+                    </button>
                     <button type="button" disabled={isLoading} onClick={handleDelete}>
                         Discharge Animal
-        </button>
+                    </button>
                 </div>
             </div>
         );

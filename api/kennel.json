@@ -36,9 +36,9 @@
       "id": 8
     },
     {
+      "id": 9,
       "name": "Steve",
-      "breed": "Gerbil Dog Hybrid",
-      "id": 9
+      "breed": "Gerbil Dog Hybrid"
     }
   ],
   "locations": [
@@ -49,8 +49,8 @@
     },
     {
       "id": 3,
-      "name": "Nashville North Kennel",
-      "address": "500 Puppy Way Nashville, TN 37216"
+      "name": "Franklin Kennel",
+      "address": "456 Main St."
     },
     {
       "name": "Nashville North",
@@ -97,9 +97,9 @@
       "id": 4
     },
     {
-      "name": "Jeff Jefferson",
-      "title": "King of the Jeffs",
-      "id": 5
+      "id": 5,
+      "name": "Michael Prince",
+      "title": "Walker (Senior Dogs)"
     }
   ]
 }

@@ -3,13 +3,14 @@ small {
   }
   
   header {
-    background-color: darkblue;
-    border: cornflowerblue solid 3px;
+    background-color: #345511;
+    border: #3F6634 solid 3px;
   }
   
   .site-title {
-    color: ghostwhite;
+    color: #DCFFFD;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   nav .container {
@@ -23,18 +24,18 @@ small {
     padding: 10px;
     text-align: center;
     font-size: 1.5em;
-    color: cornsilk;
+    color: #DCFFFD;
     box-sizing: border-box;
-    background-color: cornflowerblue;
+    background-color: #3F6634;
     list-style-type: none;
   }
   
   .nav-link {
-    color: cornsilk;
+    color: #DCFFFD;
     text-decoration: underline;
     cursor: pointer;
   }
   
   .nav-link:hover {
-    color: maroon;
+    color: #52FFEE;
   }
