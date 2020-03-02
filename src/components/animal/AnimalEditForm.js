@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react"
-import AnimalManager from "../../modules/AnimalManager"
-import "./AnimalForm.css"
+import React, { useState, useEffect } from "react";
+import AnimalManager from "../../modules/AnimalManager";
+import EmployeeManager from "../../modules/EmployeeManager";
+import "./AnimalForm.css";
 
 const AnimalEditForm = props => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
   const [isLoading, setIsLoading] = useState(false);
+  const [employees, setEmployees] = useState([]);
 
   const handleFieldChange = evt => {
     const stateToChange = { ...animal };
@@ -20,7 +22,8 @@ const AnimalEditForm = props => {
     const editedAnimal = {
       id: props.match.params.animalId,
       name: animal.name,
-      breed: animal.breed
+      breed: animal.breed,
+      employeeId: parseInt(animal.employeeId)
     };
 
     AnimalManager.update(editedAnimal)
@@ -30,8 +33,11 @@ const AnimalEditForm = props => {
   useEffect(() => {
     AnimalManager.get(props.match.params.animalId)
       .then(animal => {
-        setAnimal(animal);
-        setIsLoading(false);
+        EmployeeManager.getAll().then(employees => {
+          setEmployees(employees);
+          setAnimal(animal);
+          setIsLoading(false);
+        })
       });
   }, [props.match.params.animalId]);
 
@@ -61,11 +67,26 @@ const AnimalEditForm = props => {
             <label htmlFor="breed">Breed</label>
           </div>
           <div className="alignRight">
-            <button
-              type="button" disabled={isLoading}
-              onClick={updateExistingAnimal}
-              className="btn btn-primary"
-            >Submit</button>
+            <label htmlFor="employeeId">Employee</label>
+            <select
+              className="form-control"
+              id="employeeId"
+              value={animal.employeeId}
+              onChange={handleFieldChange}
+            >
+              {employees.map(employee =>
+                <option key={employee.id} value={employee.id}>
+                  {employee.name}
+                </option>
+              )}
+            </select>
+            <div>
+              <button
+                type="button" disabled={isLoading}
+                onClick={updateExistingAnimal}
+                className="btn btn-primary"
+              >Submit</button>
+            </div>
           </div>
         </fieldset>
       </form>
