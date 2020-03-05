@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <picture>
-        <img src={require("./home.png")} alt="Happy Puppy" class="puppyImg"/>
+        <img src={require("./home.png")} alt="Happy Puppy" className="puppyImg"/>
         <div className="animal-spotlight-header" onClick={refreshSpotlightAnimal}>
         <h1>Animal Spotlight</h1>
           {
