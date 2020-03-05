@@ -3,42 +3,62 @@
     {
       "id": 1,
       "name": "Doodles",
-      "breed": "Mutt"
-    },
-    {
-      "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull"
-    },
-    {
-      "id": 4,
-      "name": "Pickles",
-      "breed": "Golden Doodle"
-    },
-    {
-      "id": 5,
-      "name": "monkey",
-      "breed": "Black Lab"
+      "breed": "Mutt",
+      "employeeId": 3
     },
     {
       "id": 6,
       "name": "Rory",
-      "breed": "Mutt"
+      "breed": "Mutt",
+      "employeeId": 5
     },
     {
-      "name": "Ozzy",
-      "breed": "Labradoodle",
-      "id": 7
-    },
-    {
+      "id": 8,
       "name": "bumbly",
       "breed": "Basset Hound",
-      "id": 8
+      "employeeId": 1
     },
     {
       "id": 9,
       "name": "Steve",
-      "breed": "Gerbil Dog Hybrid"
+      "breed": "Gerbil Dog Hybrid",
+      "employeeId": 5
+    },
+    {
+      "id": 10,
+      "name": "Monkey",
+      "breed": "Mutt",
+      "employeeId": 3
+    },
+    {
+      "id": 12,
+      "name": "Steuben",
+      "breed": "Schnauzer",
+      "employeeId": 3
+    },
+    {
+      "id": 13,
+      "name": "Monkey 2",
+      "breed": "mutt",
+      "employeeId": 3
+    },
+    {
+      "id": 14,
+      "name": "Noel",
+      "breed": "Mutt",
+      "employeeId": 1
+    },
+    {
+      "id": 15,
+      "name": "Muttsy",
+      "breed": "Mutt",
+      "employeeId": 2
+    },
+    {
+      "id": 16,
+      "name": "Pupster",
+      "breed": "puppy",
+      "employeeId": 2
     }
   ],
   "locations": [
