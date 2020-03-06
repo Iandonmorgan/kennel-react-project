@@ -43,21 +43,9 @@
       "employeeId": 3
     },
     {
-      "id": 14,
-      "name": "Noel",
-      "breed": "Mutt",
-      "employeeId": 1
-    },
-    {
       "id": 15,
       "name": "Muttsy",
       "breed": "Mutt",
-      "employeeId": 2
-    },
-    {
-      "id": 16,
-      "name": "Pupster",
-      "breed": "puppy",
       "employeeId": 2
     }
   ],
